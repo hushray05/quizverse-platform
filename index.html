@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>QuizVerse</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#1f005f","inverse-primary":"#b9c3ff","tertiary":"#49577c","on-primary-fixed":"#001356","outline":"#747686","on-error":"#ffffff","on-secondary-fixed-variant":"#4e13c7","secondary-fixed":"#e7deff","surface-dim":"#d9dade","inverse-surface":"#2e3134","on-error-container":"#93000a","surface-container-lowest":"#ffffff","tertiary-container":"#616f96","surface-bright":"#f8f9fd","tertiary-fixed-dim":"#b7c6f2","primary-fixed-dim":"#b9c3ff","on-secondary-container":"#fffbff","primary":"#2248d1","background":"#f8f9fd","surface-container":"#edeef2","inverse-on-surface":"#eff1f5","secondary-fixed-dim":"#cdbdff","on-primary":"#ffffff","primary-container":"#4263eb","on-tertiary-fixed-variant":"#38466b","secondary":"#6437dc","surface-container-highest":"#e1e2e6","surface-container-high":"#e7e8ec","on-secondary":"#ffffff","surface":"#f8f9fd","on-primary-container":"#f5f3ff","primary-fixed":"#dde1ff","on-surface-variant":"#444654","outline-variant":"#c4c5d7","on-surface":"#191c1f","on-primary-fixed-variant":"#0035be","secondary-container":"#7d55f7","surface-variant":"#e1e2e6","on-tertiary-fixed":"#0a1a3d","tertiary-fixed":"#dae2ff","on-background":"#191c1f","surface-container-low":"#f2f3f7","error":"#ba1a1a","on-tertiary-container":"#f3f4ff","on-tertiary":"#ffffff","surface-tint":"#2c50d9","error-container":"#ffdad6"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xl":"2rem","space-md":"1rem","margin-mobile":"1rem","space-sm":"0.75rem","space-xs":"0.5rem","margin":"2rem"},fontFamily:{"headline-lg-mobile":["Manrope"],"body-md":["Inter"],"display-hero":["Manrope"],"display-hero-mobile":["Manrope"],"headline-md":["Manrope"],"headline-sm":["Manrope"],"body-lg":["Inter"],"label-lg":["Inter"],"headline-lg":["Manrope"],"numeric-metric":["Manrope"],"label-md":["Inter"],"body-sm":["Inter"]},fontSize:{"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"800"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"numeric-metric":["28px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}};</script></head><body class="min-h-full bg-surface text-on-surface font-body-md text-body-md antialiased flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-[68px] max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs" data-path="home" href="#"><img alt="QuizVerse Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4SWaghB6zG41SzHDT8yo8CRvq-0RTd_ChvwIkVdP3_AnQbJv5IUdn63PhZMCAB_imvmlqSyNjtaLx-RprOdyzbvxfWWBI22B67Qkqss1y-VvrdZ34NdXzRB9DeKyNg27unx8Cem_iTfsIIIt-lxHfEaEzHLRoyHlZAsL2jm9YprR7vxyi9ijl-TQJnuT8Tlou_CJrCiRQxkqY_1gOEX2cmPmL1dvF8FTClkohT6bMutBn4H44C2CJV4A"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">QuizVerse</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-fixed text-on-primary-fixed font-bold rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-fixed text-on-primary-fixed font-bold rounded-lg" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="explore-quizzes" href="#">Explore Quizzes</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="categories" href="#">Categories</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="daily-challenge" href="#">Daily Challenge</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="advertise-with-us" href="#">Advertise With Us</a></nav></div><div class="flex items-center gap-space-sm"><a class="inline-flex items-center justify-center px-space-md py-space-xs rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity" data-path="explore-quizzes" href="#">Play Now</a><div class="hidden sm:flex items-center gap-space-xs p-1 pr-space-sm rounded-full bg-surface-container-low border border-outline-variant/50"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo3F7GWsewfUCGBeZbTmx0PlFCilCpzCMIgkdUDzxU1ve1HEeWW2OLthpm4dX3lRrbgsZBMKB-yQ31HBDVlu2JRI1pRztccOKKWe4Y-_61RIjmcVPIK_xXCn9X-bSnDl2EGjx-GnFXEDVjMiQPvb_eIaDkAVmQQ0zI7AwjKoDko-pH-Pm6sQracOjwm1yPcscxDE3nwFXkg11cARnyU4sAvm9r7y7m5FEHEp8OtZ-p-4FrMP1hdz0OZw"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-none">Alex M.</span><span class="font-label-md text-[10px] text-primary font-bold leading-none mt-0.5">2,450 pts</span></div><button class="relative p-1 text-on-surface-variant hover:text-on-surface transition-colors ml-1" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-0.5 right-0.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button></div><div class="hidden lg:flex items-center gap-space-xs pl-space-xs border-l border-outline-variant/60"><a class="px-space-xs py-1 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="login" href="#">Log In</a><a class="px-space-xs py-1 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sign-up" href="#">Sign Up</a></div></div></div></header><main class="flex-1 w-full pt-[68px] bg-surface"><div class="flex flex-col w-full">
+<!-- Top Decorative Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[980px] h-[360px] bg-gradient-to-tr from-primary/10 via-secondary/10 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<!-- Section A: Hero Section -->
+<section class="max-w-7xl mx-auto px-gutter pt-space-xl pb-space-xl w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Hero Copy -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant self-start shadow-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Live Intel Arena • Season 4</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+            Your Next Big Brain Challenge <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">Starts Here.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Test your knowledge, discover new challenges, earn achievements, and see how you rank against other players worldwide.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary transition-all duration-200 hover:-translate-y-0.5" data-path="explore-quizzes" href="#">
+<span>Play Now</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all" data-path="explore-quizzes" href="#">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+<span>Explore Quizzes</span>
+</a>
+</div>
+<!-- Quick Metrics Bar -->
+<div class="flex items-center gap-space-lg pt-space-md border-t border-surface-container">
+<div>
+<p class="font-numeric-metric text-numeric-metric text-on-surface">1,400+</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Verified Quizzes</p>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div>
+<p class="font-numeric-metric text-numeric-metric text-on-surface">240k+</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Daily Players</p>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div>
+<p class="font-numeric-metric text-numeric-metric text-primary">99.4%</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Fact Precision</p>
+</div>
+</div>
+</div>
+<!-- Hero Visual Composition -->
+<div class="lg:col-span-5 relative">
+<!-- Floating XP streak chip -->
+<div class="absolute -top-4 -right-2 z-20 flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-lowest shadow-lg animate-bounce duration-1000">
+<span class="material-symbols-outlined text-amber-500 text-[20px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">+250 XP</span>
+<span class="text-[11px] font-label-md bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full">Streak Master</span>
+</div>
+<!-- Main Floating Interactive Card -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-xl">
+<!-- Header of card -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+<span class="font-label-md text-label-md text-on-surface-variant ml-2">Question 07/10</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container font-label-md text-label-md text-primary font-bold">12s left</span>
+</div>
+<!-- Quiz Question -->
+<div class="py-space-md">
+<span class="font-label-md text-[11px] tracking-widest uppercase text-tertiary font-bold">Planetary Astronomy</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">
+                Which planet has the most officially recognized moons?
+              </h3>
+</div>
+<!-- Answer Options with distinct visual states -->
+<div class="flex flex-col gap-space-xs">
+<!-- Option A (Resting) -->
+<button class="w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center font-label-md text-label-md font-bold text-on-surface-variant">A</span>
+<span class="font-body-md text-body-md">Jupiter</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">radio_button_unchecked</span>
+</button>
+<!-- Option B (Selected / Correct State) -->
+<div class="w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-emerald-50 text-emerald-900 shadow-sm text-left">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-emerald-600 text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">B</span>
+<span class="font-body-md text-body-md font-semibold">Saturn (146 moons)</span>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Option C (Resting) -->
+<button class="w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center font-label-md text-label-md font-bold text-on-surface-variant">C</span>
+<span class="font-body-md text-body-md">Neptune</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">radio_button_unchecked</span>
+</button>
+<!-- Option D (Resting) -->
+<button class="w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center font-label-md text-label-md font-bold text-on-surface-variant">D</span>
+<span class="font-body-md text-body-md">Uranus</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">radio_button_unchecked</span>
+</button>
+</div>
+<!-- Footer Badge cluster -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-md bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> Quick Thinker
+                </span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-md bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Space Trivia
+                </span>
+</div>
+<span class="text-label-md font-label-md text-tertiary">91% Correct</span>
+</div>
+</div>
+<!-- Secondary Overlapping Achievement Card -->
+<div class="absolute -bottom-6 -left-6 z-20 hidden sm:flex items-center gap-space-sm p-space-sm pr-space-md rounded-2xl bg-surface-container-lowest shadow-lg">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Grandmaster Rank</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Top 2% in General Science</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Section B: Quick Play Component -->
+<section class="max-w-7xl mx-auto px-gutter py-space-lg w-full">
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-md">
+<div class="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-primary-fixed-dim/40 via-secondary-fixed/20 to-transparent rounded-full blur-2xl -z-0 pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Title and Guest Notice -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-bold font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">flash_on</span>
+<span>Zero Friction Trivia</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Jump In &amp; Play — No Sign-up Needed!
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Guests play instantly. Scores can be saved anytime to unlock permanent leaderboards.
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs text-tertiary text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">verified_user</span>
+<span>Instant matchmaking • 10 Random questions per round</span>
+</div>
+</div>
+<!-- Controls: Difficulty & Category Selectors -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Difficulty Selector -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-1.5">Select Difficulty</label>
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-surface-container">
+<button class="py-2 text-center rounded-lg font-label-md text-label-md bg-surface-container-lowest text-emerald-700 font-bold shadow-sm transition-all" onclick="selectDifficulty(this, 'Easy')" type="button">
+                  Easy
+                </button>
+<button class="py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="selectDifficulty(this, 'Medium')" type="button">
+                  Medium
+                </button>
+<button class="py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="selectDifficulty(this, 'Hard')" type="button">
+                  Hard
+                </button>
+</div>
+</div>
+<!-- Category Dropdown -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-1.5" for="quickCategorySelect">Choose Category</label>
+<div class="relative">
+<select class="w-full h-11 px-space-sm pr-space-lg rounded-xl bg-surface-container text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer" id="quickCategorySelect">
+<option value="all">Any Category (Random Mix)</option>
+<option value="science">Science &amp; Nature</option>
+<option value="tech">Technology &amp; Coding</option>
+<option value="geography">World Geography</option>
+<option value="history">World History</option>
+<option value="pop">Entertainment &amp; Cinema</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Row -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>18,490 quick-matches completed today</span>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all hover:scale-[1.02]" onclick="triggerQuickPlay()" type="button">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+<span>Launch Quick Play</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section C: Reserved Banner Ad Slot 1 -->
+<section class="max-w-7xl mx-auto px-gutter py-space-sm w-full">
+<div class="w-full rounded-2xl bg-surface-container-low p-space-sm flex flex-col items-center justify-center text-center">
+<div class="flex items-center justify-between w-full max-w-4xl px-space-xs mb-1">
+<span class="font-label-md text-[10px] tracking-widest text-outline uppercase font-semibold">SPONSORED / ADVERTISEMENT</span>
+<a class="font-label-md text-[10px] text-primary hover:underline" data-path="advertise-with-us" href="#">Advertise With Us</a>
+</div>
+<div class="w-full max-w-4xl h-[90px] rounded-xl bg-surface-container-lowest flex items-center justify-between px-space-lg shadow-sm overflow-hidden relative">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[28px]">devices</span>
+</div>
+<div class="text-left">
+<span class="inline-block text-[10px] font-label-md bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.2 rounded font-bold uppercase">CloudDev Academy</span>
+<p class="font-headline-sm text-[16px] text-on-surface font-bold leading-tight mt-0.5">Level up your technical interviews with simulated code tests.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant hidden md:block">Over 4,000 real problems from FAANG architectures.</p>
+</div>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1 px-space-md py-space-xs rounded-xl bg-on-surface text-surface font-label-md text-label-md whitespace-nowrap hover:opacity-90" href="#">
+<span>Try Free</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section D: Trending Quizzes Grid -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-bold font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span>Community Pulse</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Trending Quizzes Right Now</h2>
+</div>
+<a class="inline-flex items-center gap-1 font-label-lg text-label-lg text-primary hover:text-primary-container transition-colors" data-path="explore-quizzes" href="#">
+<span>View all trending sets</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Quiz Card 1 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">sports_soccer</span>
+</div>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-semibold tracking-wide uppercase">Easy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+            Ultimate Football Challenge
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            Test your memory of legendary World Cup moments, historic clubs, and Champions League finals.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>10 Qs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>5 mins</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-medium">42.8k plays</span>
+</div>
+<a class="mt-space-sm w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-primary-container hover:text-on-primary transition-all" data-path="explore-quizzes" href="#">
+          Play Quiz
+        </a>
+</div>
+<!-- Quiz Card 2 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">public</span>
+</div>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-semibold tracking-wide uppercase">Medium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+            World Geography Explorer
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            Navigate through capital cities, topological wonders, archipelagos, and disputed borders.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>12 Qs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>6 mins</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-medium">38.2k plays</span>
+</div>
+<a class="mt-space-sm w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-primary-container hover:text-on-primary transition-all" data-path="explore-quizzes" href="#">
+          Play Quiz
+        </a>
+</div>
+<!-- Quiz Card 3 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">science</span>
+</div>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-900 font-semibold tracking-wide uppercase">Hard</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+            Science Facts You Should Know
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            From quantum entanglement to organic chemistry pathways — the ultimate test for curious minds.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>15 Qs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>8 mins</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-medium">51.9k plays</span>
+</div>
+<a class="mt-space-sm w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-primary-container hover:text-on-primary transition-all" data-path="explore-quizzes" href="#">
+          Play Quiz
+        </a>
+</div>
+<!-- Quiz Card 4 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">flag</span>
+</div>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-semibold tracking-wide uppercase">Easy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+            Guess the Flag
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            Identify nations through their vexillological patterns, coat of arms, and color schemes.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>10 Qs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>4 mins</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-medium">65.4k plays</span>
+</div>
+<a class="mt-space-sm w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-primary-container hover:text-on-primary transition-all" data-path="explore-quizzes" href="#">
+          Play Quiz
+        </a>
+</div>
+<!-- Quiz Card 5 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed-dim flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">movie</span>
+</div>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-semibold tracking-wide uppercase">Medium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+            Movies &amp; Entertainment
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            From Oscar-winning cinematography to cult 90s TV shows and blockbuster trivia.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>12 Qs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>6 mins</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-medium">31.0k plays</span>
+</div>
+<a class="mt-space-sm w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-primary-container hover:text-on-primary transition-all" data-path="explore-quizzes" href="#">
+          Play Quiz
+        </a>
+</div>
+<!-- Quiz Card 6 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">quiz</span>
+</div>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-900 font-semibold tracking-wide uppercase">Hard</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+            General Knowledge Challenge
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            The decathlon of facts. Philosophy, world literature, architecture, and world records combined.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>15 Qs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>7 mins</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-medium">78.5k plays</span>
+</div>
+<a class="mt-space-sm w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-primary-container hover:text-on-primary transition-all" data-path="explore-quizzes" href="#">
+          Play Quiz
+        </a>
+</div>
+</div>
+</section>
+<!-- Section E: Browse Categories Grid (12 Items) -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-bold font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Knowledge Domains</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Browse by Category</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+        Dive deep into specific disciplines or sharpen cross-functional acumen.
+      </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-space-md">
+<!-- 1. General Knowledge -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">lightbulb</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">General Knowledge</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">210 Quizzes</span>
+</a>
+<!-- 2. Science -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">biotech</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Science</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">185 Quizzes</span>
+</a>
+<!-- 3. Technology -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">terminal</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Technology</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">142 Quizzes</span>
+</a>
+<!-- 4. Geography -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">public</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Geography</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">160 Quizzes</span>
+</a>
+<!-- 5. History -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">History</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">198 Quizzes</span>
+</a>
+<!-- 6. Sports -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">sports_volleyball</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Sports</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">115 Quizzes</span>
+</a>
+<!-- 7. Entertainment -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">celebration</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Entertainment</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">134 Quizzes</span>
+</a>
+<!-- 8. Movies & Television -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">theaters</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Movies &amp; TV</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">172 Quizzes</span>
+</a>
+<!-- 9. Mathematics -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">calculate</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Mathematics</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">94 Quizzes</span>
+</a>
+<!-- 10. Language & Literature -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Literature</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">110 Quizzes</span>
+</a>
+<!-- 11. Nature & Animals -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-lime-500/10 text-lime-700 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">pets</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Nature &amp; Fauna</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">128 Quizzes</span>
+</a>
+<!-- 12. Business & Economics -->
+<a class="rounded-2xl bg-surface-container-lowest p-space-md flex flex-col items-center text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group" data-path="categories" href="#">
+<div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">query_stats</span>
+</div>
+<h4 class="font-headline-sm text-[15px] text-on-surface group-hover:text-primary transition-colors">Business &amp; Econ</h4>
+<span class="font-label-md text-label-md text-tertiary mt-1">87 Quizzes</span>
+</a>
+</div>
+</section>
+<!-- Section F: Daily Challenge Spotlight Card -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="relative rounded-3xl bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-lg overflow-hidden">
+<!-- Golden Ambient Glow Behind Content -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-0 right-0 w-80 h-full bg-gradient-to-l from-amber-500/5 to-transparent pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Content Block -->
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-amber-600" style="font-variation-settings: 'FILL' 1;">stars</span>
+              Today's Daily Challenge
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px] text-amber-600">workspace_premium</span>
+              500 Reward Points
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+              15 Questions
+            </span>
+</div>
+<h2 class="font-display-hero-mobile lg:font-headline-lg text-display-hero-mobile lg:text-headline-lg text-on-surface mt-1">
+            Cosmic Astronomy &amp; Space Exploration
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Examine deep-sky nebulae, historic Apollo telemetry, and the physics of gravitational lensing. Complete today’s sprint before the global timer resets to lock your spot in the Hall of Fame.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl bg-amber-500 text-on-surface font-label-lg text-label-lg font-bold shadow-md hover:bg-amber-400 transition-all" data-path="daily-challenge" href="#">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+<span>Play Challenge</span>
+</a>
+<div class="flex items-center gap-space-xs text-on-surface font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-outline text-[20px]">group</span>
+<span>12,842 contenders completed today</span>
+</div>
+</div>
+</div>
+<!-- Timer & Gold Trophy Card Visual -->
+<div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
+<div class="w-full max-w-sm rounded-2xl bg-surface-container-low p-space-lg flex flex-col items-center text-center shadow-sm">
+<div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-700 mb-space-sm">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<p class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Challenge Closes In</p>
+<div class="font-numeric-metric text-numeric-metric text-on-surface my-1 tracking-wider" id="dailyChallengeTimer">
+              08:42:15
+            </div>
+<p class="font-body-sm text-[12px] text-tertiary">New challenge drops daily at 00:00 UTC</p>
+<div class="w-full bg-surface-container mt-space-md rounded-full h-2 overflow-hidden">
+<div class="bg-amber-500 h-2 rounded-full w-2/3"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section G: Leaderboard Preview & Top Players -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-bold font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">trophy</span>
+<span>Rankings &amp; Prestige</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Weekly Global Leaderboard</h2>
+</div>
+<a class="inline-flex items-center gap-1 font-label-lg text-label-lg text-primary hover:text-primary-container transition-colors" data-path="leaderboard" href="#">
+<span>View Full Leaderboard</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Top 3 Podium Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-md">
+<!-- Rank 2: Silver -->
+<div class="order-2 md:order-1 rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<div class="w-full flex items-center justify-between mb-space-xs">
+<span class="font-numeric-metric text-numeric-metric text-slate-400 font-extrabold">#2</span>
+<span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-label-md text-[11px] font-bold uppercase">Silver Tier</span>
+</div>
+<div class="relative my-space-xs">
+<img class="w-20 h-20 rounded-full object-cover shadow-sm" data-alt="Close up photographic avatar of a male Japanese competitive trivia gamer Kenji, clean studio headshot with subtle purple backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbmS2Pyw4a-Ql9ummyH5wZ3PhvIwj7KjgLagHdELaLI_La9Q-uthhXCQaUWeDDGXOvMGJtteaQamoi-UR0zEZuPrL_RIgF6kMikoFM6XSu94P5ItL7DSGfGnCc_nCHzR82Sdy8-NmvESpXNFnwVa1PBFS72IPQgQj4BpID2BYgXTi7cSOfuysaeRJPU8bF29AiStwq6zOm2_sWHfhvhLcMfA01bQ0CnAeb9xtMBwBfkjVt6yxv6naFyQ"/>
+<div class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-slate-400 text-on-primary flex items-center justify-center font-bold text-[12px] shadow-sm">
+            2
+          </div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Kenji_99</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Tokyo • 94% Accuracy</p>
+<div class="mt-space-md py-1.5 px-space-md rounded-xl bg-surface-container-low w-full">
+<span class="font-numeric-metric text-[20px] text-on-surface font-bold">13,950 pts</span>
+</div>
+</div>
+<!-- Rank 1: Gold (Elevated center) -->
+<div class="order-1 md:order-2 rounded-2xl bg-surface-container-lowest p-space-lg shadow-md md:-translate-y-3 flex flex-col items-center text-center relative overflow-hidden">
+<div class="w-full flex items-center justify-between mb-space-xs">
+<span class="font-numeric-metric text-numeric-metric text-amber-500 font-extrabold">#1</span>
+<span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-md text-[11px] font-bold uppercase">Champion</span>
+</div>
+<div class="relative my-space-xs">
+<img class="w-24 h-24 rounded-full object-cover shadow-md" data-alt="Portrait photo of competitive quiz champion Sarah Vortex, dynamic warm ambient studio lighting, vibrant and smart aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjGDqD9k-JRRKSoZi1sTsWmhCeSElk-iBEzWZd437Tgb7qQGP7E-9ytFLUHIaYD4N6lqdmMK9F41j87tip5l3qpBbFJd0ycEM1MvTvW23cp80vIm8bC4J6tv1psY49-kexTI89lM2bVfSM0u9OK8_QG6K_tmhUz1bRMIiLZ9mZ5opvhQmRtprW-wCEY6EVxeybbG6NTMcOsxcoTO5bn4GhDg5mfBefFvHwW4xUYROcKodBNq7FjQxIHg"/>
+<div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-amber-500 text-on-surface flex items-center justify-center font-bold text-[14px] shadow-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">crown</span>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Sarah_Vortex</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">London • 24 Quiz Streak</p>
+<div class="mt-space-md py-2 px-space-md rounded-xl bg-amber-50 w-full">
+<span class="font-numeric-metric text-[22px] text-amber-900 font-extrabold">14,820 pts</span>
+</div>
+</div>
+<!-- Rank 3: Bronze -->
+<div class="order-3 md:order-3 rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<div class="w-full flex items-center justify-between mb-space-xs">
+<span class="font-numeric-metric text-numeric-metric text-amber-700 font-extrabold">#3</span>
+<span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-900 font-label-md text-[11px] font-bold uppercase">Bronze Tier</span>
+</div>
+<div class="relative my-space-xs">
+<img class="w-20 h-20 rounded-full object-cover shadow-sm" data-alt="Portrait photography of Elena Brain female trivia strategist, clean modern tech aesthetic, deep navy background tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqOq9hXzmkxgLfiDqaS4kHX6Zut0-DiK3DdBMPbcPHTHJ1tk2wckVTsd0F-M0lXIB1sJG9PZffcSshvbB2w4hfZUUYROEijpXUc_OVcfOOaW1tlpo4QxYGsiP-vBD0WOc4703sMP3wWrJLZEAyP-NKT5l3y1ACe-CTRn1APP4NET0se50j2tqZ93lFvAYibRZvg7mEFmWw4xkA2RNTJ_YQZ3n7IIj7nnnb_FCVUIlAKOW6eTMHxnaU0Q"/>
+<div class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-amber-700 text-on-primary flex items-center justify-center font-bold text-[12px] shadow-sm">
+            3
+          </div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">ElenaBrain</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Berlin • 91% Accuracy</p>
+<div class="mt-space-md py-1.5 px-space-md rounded-xl bg-surface-container-low w-full">
+<span class="font-numeric-metric text-[20px] text-on-surface font-bold">12,400 pts</span>
+</div>
+</div>
+</div>
+<!-- Compact List Preview (Ranks 4 - 5) -->
+<div class="flex flex-col gap-space-xs">
+<!-- Rank 4 -->
+<div class="rounded-xl bg-surface-container-lowest px-space-lg py-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface-variant w-6 text-center">#4</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-label-md">
+            MR
+          </div>
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold">Marcus_R</h5>
+<span class="font-body-sm text-[12px] text-on-surface-variant">General Knowledge Specialist</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-numeric-metric text-[18px] text-on-surface font-bold">11,920 pts</span>
+<p class="font-label-md text-[11px] text-emerald-600 font-semibold">↑ +2 places today</p>
+</div>
+</div>
+<!-- Rank 5 -->
+<div class="rounded-xl bg-surface-container-lowest px-space-lg py-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface-variant w-6 text-center">#5</span>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-label-md">
+            AY
+          </div>
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold">Anya_Y</h5>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Tech &amp; Coding Speedster</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-numeric-metric text-[18px] text-on-surface font-bold">11,180 pts</span>
+<p class="font-label-md text-[11px] text-tertiary font-semibold">Consistent Top 10</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section H: How QuizVerse Works -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-space-xs text-primary font-bold font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Simple, Compelling Gameplay</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">How QuizVerse Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Designed for razor-sharp clarity, rapid pacing, and measurable personal improvement.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col relative group">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-numeric-metric text-numeric-metric mb-space-md">
+          1
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Choose a Challenge</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Select from over a dozen verified categories, try rapid Quick Play, or dive into curated daily tournament challenges.
+        </p>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center gap-space-xs text-primary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+<span>1-Click Launch</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col relative group">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-numeric-metric text-numeric-metric mb-space-md">
+          2
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Answer &amp; Earn Points</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Respond against dynamic countdown timers. Maintain unbroken answer streaks to amplify multiplier rewards and unlock XP.
+        </p>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center gap-space-xs text-secondary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Adaptive Multipliers</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col relative group">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-numeric-metric text-numeric-metric mb-space-md">
+          3
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Track &amp; Compete</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Review detailed accuracy analytics per topic, climb weekly division brackets, and earn verified master badges.
+        </p>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center gap-space-xs text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">leaderboard</span>
+<span>Global Brackets</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section I: Account Benefits Banner -->
+<section class="max-w-7xl mx-auto px-gutter pt-space-sm pb-space-xl w-full">
+<div class="rounded-3xl bg-gradient-to-r from-on-secondary-fixed via-primary-container to-secondary text-on-primary p-space-lg lg:p-space-xl shadow-xl relative overflow-hidden">
+<!-- Decorative Backdrop circles -->
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-on-primary font-label-md text-label-md self-start font-semibold">
+<span class="material-symbols-outlined text-[16px]">military_tech</span>
+            Unlock Your Complete Trivia Profile
+          </span>
+<h2 class="font-display-hero-mobile lg:font-headline-lg text-display-hero-mobile lg:text-headline-lg text-on-primary">
+            Save Your Progress. Compete Globally. Never Lose a Streak.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-xl">
+            Members preserve complete answer histories, track cognitive performance over time, maintain high-value streak bonuses, and bookmark custom favorite topics.
+          </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs pt-space-xs font-label-md text-label-md text-on-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-300 text-[18px]">check_circle</span>
+<span>Full Quiz Archive</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-300 text-[18px]">check_circle</span>
+<span>Streak Protection</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-300 text-[18px]">check_circle</span>
+<span>Division Ranks</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-300 text-[18px]">check_circle</span>
+<span>Custom Playlists</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-300 text-[18px]">check_circle</span>
+<span>Verified Badges</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-300 text-[18px]">check_circle</span>
+<span>100% Free Forever</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
+<div class="w-full max-w-sm bg-surface-container-lowest text-on-surface p-space-lg rounded-2xl shadow-xl flex flex-col gap-space-sm text-center">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[28px]">person_add</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Join 240,000+ Players</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Takes less than 30 seconds. No credit card required.</p>
+<a class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container transition-all" data-path="sign-up" href="#">
+              Create Your Free Account
+            </a>
+<a class="font-label-md text-label-md text-primary hover:underline" data-path="login" href="#">
+              Already have an account? Sign In
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript Helper for Difficulty Selection and Countdown Simulation -->
+<script>
+    function selectDifficulty(button, level) {
+      const parent = button.parentElement;
+      const buttons = parent.querySelectorAll('button');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-emerald-700', 'text-amber-800', 'text-rose-800', 'font-bold', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      });
+
+      button.classList.remove('text-on-surface-variant');
+      button.classList.add('bg-surface-container-lowest', 'font-bold', 'shadow-sm');
+      if (level === 'Easy') button.classList.add('text-emerald-700');
+      if (level === 'Medium') button.classList.add('text-amber-800');
+      if (level === 'Hard') button.classList.add('text-rose-800');
+    }
+
+    function triggerQuickPlay() {
+      const select = document.getElementById('quickCategorySelect');
+      const category = select ? select.value : 'all';
+      window.location.hash = '#explore-quizzes';
+    }
+
+    // Daily countdown tick simulation
+    (function initTimer() {
+      const timerElement = document.getElementById('dailyChallengeTimer');
+      if (!timerElement) return;
+      let totalSeconds = 8 * 3600 + 42 * 60 + 15;
+      setInterval(() => {
+        if (totalSeconds > 0) totalSeconds--;
+        const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+        const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+        const seconds = String(totalSeconds % 60).padStart(2, '0');
+        timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+      }, 1000);
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container"><div class="max-w-7xl mx-auto px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="QuizVerse Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4SWaghB6zG41SzHDT8yo8CRvq-0RTd_ChvwIkVdP3_AnQbJv5IUdn63PhZMCAB_imvmlqSyNjtaLx-RprOdyzbvxfWWBI22B67Qkqss1y-VvrdZ34NdXzRB9DeKyNg27unx8Cem_iTfsIIIt-lxHfEaEzHLRoyHlZAsL2jm9YprR7vxyi9ijl-TQJnuT8Tlou_CJrCiRQxkqY_1gOEX2cmPmL1dvF8FTClkohT6bMutBn4H44C2CJV4A"/><span class="font-headline-sm text-headline-sm text-on-surface">QuizVerse</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Play Smart. Challenge Yourself. Have Fun.</p><div class="flex items-center gap-space-xs mt-space-xs"><a aria-label="Public Forum" class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Community Chat" class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">forum</span></a><a aria-label="Leaderboard Awards" class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">trophy</span></a></div></div><div class="flex flex-col gap-space-xs"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider mb-space-xs">Platform</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-quizzes" href="#">Explore Quizzes</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="categories" href="#">Categories</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="daily-challenge" href="#">Daily Challenge</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboards</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-quizzes" href="#">Quick Play</a></div><div class="flex flex-col gap-space-xs"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider mb-space-xs">Company &amp; Business</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-quizverse" href="#">About QuizVerse</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="advertise-with-us" href="#">Advertise With Us</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="careers" href="#">Careers</a></div><div class="flex flex-col gap-space-xs"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider mb-space-xs">Legal</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cookie-preferences" href="#">Cookie Preferences</a></div></div><div class="mt-space-xl pt-space-lg border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 QuizVerse Inc. All rights reserved.</p><p class="font-body-sm text-body-sm text-on-surface-variant">Built for competitive minds and lifelong learners.</p></div></div></footer></body></html>

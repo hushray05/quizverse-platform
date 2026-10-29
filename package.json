@@ -1,0 +1,28 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@fontsource/inter": "^5.1.0",
+        "@fontsource/jetbrains-mono": "^5.1.0",
+        "@fortawesome/fontawesome-free": "^6.7.2",
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.11.0",
+        "bootstrap-icons": "^1.11.3",
+        "chart.js": "^4.4.7",
+        "concurrently": "^9.0.1",
+        "devicon": "^2.16.0",
+        "laravel-vite-plugin": "^2.0.0",
+        "lucide": "^0.475.0",
+        "postcss": "^8.4.49",
+        "sweetalert2": "^11.16.0",
+        "tailwindcss": "^3.4.17",
+        "vite": "^7.0.7"
+    },
+    "dependencies": {
+        "alpinejs": "^3.17.5"
+    }
+}
